@@ -1,3 +1,5 @@
+The sole purpose of this repo is to share code for the following [github issue](https://github.com/grpc/grpc-dotnet/issues/2688)
+
 ### What version of gRPC and what language are you using?
 
 Language: C#
