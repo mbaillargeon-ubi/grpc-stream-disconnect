@@ -1,4 +1,4 @@
-﻿using Grpc.Core;
+using Grpc.Core;
 using Grpc.Net.Client;
 
 namespace GrpcClient
@@ -17,7 +17,7 @@ namespace GrpcClient
                 {
                     KeepAlivePingDelay = TimeSpan.FromSeconds(60),
                     KeepAlivePingTimeout = TimeSpan.FromSeconds(30),
-                    KeepAlivePingPolicy = HttpKeepAlivePingPolicy.WithActiveRequests,
+                    KeepAlivePingPolicy = HttpKeepAlivePingPolicy.Always,
                 };
                 using var channel = GrpcChannel.ForAddress(SERVER_ADDRESS, new GrpcChannelOptions { HttpHandler = handler });
                 var client = new Greeter.GreeterClient(channel);
